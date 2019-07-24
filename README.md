@@ -1,0 +1,2 @@
+# SIQLETON
+SIQLETON is a dance game, designed and implemented on a Nexy 3, developed with the VHDL language with the The Integrated Software  Environment Xilinix ISE, the logic of the game is as follows: the player receives sequences of arrows, he must enter the sequences  as they are, in order to gain the maximum score (the score is incremented at each clock tick) and to stay alive, to mention that  a player has three chances of crush before getting the lose state.
