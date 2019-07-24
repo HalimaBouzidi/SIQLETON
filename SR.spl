@@ -1,0 +1,9 @@
+[Inputs]
+game_clock
+obst_in
+dead
+reset
+qs
+[Outputs]
+=arrow_out[16:0]=
+[BiDir]

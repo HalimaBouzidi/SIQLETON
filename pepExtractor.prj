@@ -1,0 +1,8 @@
+work	"../../modules missing/LFSR.vhd"
+work	"../../modules missing/Main.vhd"
+work	"../../modules missing/SR.vhd"
+work	"../../modules missing/debounce_hdl.vhd"
+work	"../../modules missing/diviseur_clk.vhd"
+work	"../../modules missing/game_logic_runGa.vhd"
+work	"../../modules missing/msa_hdl.vhd"
+work	"pick_an_arrow.vhd"

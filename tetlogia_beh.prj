@@ -1,0 +1,8 @@
+vhdl work "../../modules missing/SR.vhd"
+vhdl work "../../modules missing/msa_hdl.vhd"
+vhdl work "../../modules missing/LFSR.vhd"
+vhdl work "../../modules missing/diviseur_clk.vhd"
+vhdl work "../../modules missing/debounce_hdl.vhd"
+vhdl work "pick_an_arrow.vhd"
+vhdl work "../../modules missing/game_logic_runGa.vhd"
+vhdl work "tetlogia.vhd"

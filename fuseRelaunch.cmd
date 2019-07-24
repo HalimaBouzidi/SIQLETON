@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/jean/Pictures/Projet_sembV4.1/generate_arrows/generate_arrows/test4_isim_beh.exe" -prj "C:/Users/jean/Pictures/Projet_sembV4.1/generate_arrows/generate_arrows/test4_beh.prj" "work.test4" 

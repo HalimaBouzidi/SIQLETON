@@ -1,0 +1,30 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Jan 10 17:00:15 2019
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "HS" LOCATE = SITE "N6" LEVEL 1;
+COMP "VS" LOCATE = SITE "P7" LEVEL 1;
+COMP "s1" LOCATE = SITE "R11" LEVEL 1;
+COMP "s2" LOCATE = SITE "N11" LEVEL 1;
+COMP "s3" LOCATE = SITE "M11" LEVEL 1;
+COMP "s4" LOCATE = SITE "V15" LEVEL 1;
+COMP "s5" LOCATE = SITE "U15" LEVEL 1;
+COMP "s6" LOCATE = SITE "V16" LEVEL 1;
+COMP "s7" LOCATE = SITE "U16" LEVEL 1;
+COMP "Clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "KeyboardData" LOCATE = SITE "J13" LEVEL 1;
+COMP "KeyboardClock" LOCATE = SITE "L12" LEVEL 1;
+COMP "qs_s" LOCATE = SITE "T11" LEVEL 1;
+COMP "start" LOCATE = SITE "T10" LEVEL 1;
+COMP "rgb<0>" LOCATE = SITE "R7" LEVEL 1;
+COMP "rgb<1>" LOCATE = SITE "T7" LEVEL 1;
+COMP "rgb<2>" LOCATE = SITE "P8" LEVEL 1;
+COMP "rgb<3>" LOCATE = SITE "T6" LEVEL 1;
+COMP "rgb<4>" LOCATE = SITE "V6" LEVEL 1;
+COMP "rgb<5>" LOCATE = SITE "U7" LEVEL 1;
+COMP "rgb<6>" LOCATE = SITE "V7" LEVEL 1;
+COMP "rgb<7>" LOCATE = SITE "N7" LEVEL 1;
+COMP "next_s" LOCATE = SITE "T9" LEVEL 1;
+SCHEMATIC END;
+

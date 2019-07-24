@@ -1,0 +1,5 @@
+vhdl isim_temp "../Detecteur_SEQ_Updated/Detecteur_SEQ_Updated/msa_hdl.vhd"
+vhdl isim_temp "../Detecteur_SEQ_Updated/Detecteur_SEQ_Updated/diviseur_clk.vhd"
+vhdl isim_temp "../Detecteur_SEQ_Updated/Detecteur_SEQ_Updated/debounce_hdl.vhd"
+vhdl isim_temp "../Detecteur_SEQ_Updated/Detecteur_SEQ_Updated/Main.vhd"
+verilog isim_temp "E:/amira/14.7/ISE_DS/ISE//verilog/src/glbl.v"

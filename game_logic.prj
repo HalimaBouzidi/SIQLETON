@@ -1,0 +1,4 @@
+vhdl work "../../SR.vhd"
+vhdl work "../../LFSR.vhd"
+vhdl work "pick_an_arrow.vhd"
+vhdl work "../../game_logic_runGa.vhd"

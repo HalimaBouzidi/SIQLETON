@@ -1,0 +1,119 @@
+
+****** PlanAhead v14.7 (64-bit)
+  **** Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Common 17-86] Your PlanAhead license expires in -1005 day(s)
+INFO: [Device 21-36] Loading parts and site information from D:/xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [D:/xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [D:/xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source {D:/ise vhdl/Projet_sembV1.5/generate_arrows/generate_arrows/pa.fromNetlist.tcl}
+# create_project -name generate_arrows -dir "D:/ise vhdl/Projet_sembV1.5/generate_arrows/generate_arrows/planAhead_run_1" -part xc6slx16csg324-2
+create_project: Time (s): elapsed = 00:00:10 . Memory (MB): peak = 411.457 ; gain = 63.871
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "D:/ise vhdl/Projet_sembV1.5/generate_arrows/generate_arrows/Top_module.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {D:/ise vhdl/Projet_sembV1.5/generate_arrows/generate_arrows} {ipcore_dir} }
+# set_property target_constrs_file "D:/ise vhdl/Projet_sembV1.5/modules missing/Main.ucf" [current_fileset -constrset]
+Adding file 'D:/ise vhdl/Projet_sembV1.5/modules missing/Main.ucf' to fileset 'constrs_1'
+# add_files [list {D:/ise vhdl/Projet_sembV1.5/modules missing/Main.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc6slx16csg324-2
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design Top_module.ngc ...
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+WARNING:NetListWriters:298 - No output is written to Top_module.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   game_logic_componenent/scoring_system.count<31 : 0> on block Top_module is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   game_logic_componenent/obst_generator/lfsr<31 : 0> on block Top_module is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/Madd_n18538_cy<8 : 2> on block
+   Top_module is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/Madd_n18536_cy<8 : 2> on block
+   Top_module is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/Madd_n18105_lut<8 : 5> on block
+   Top_module is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/Madd_n18105_cy<4 : 1> on block
+   Top_module is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/Madd_n18534_cy<10 : 6> on block
+   Top_module is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/Madd_n18524_cy<10 : 5> on block
+   Top_module is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/Madd_n15390_cy<8 : 5> on block
+   Top_module is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   Grapic/Msub_GND_43_o_GND_43_o_sub_726_OUT_cy<9 : 6> on block Top_module is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/Madd_n18556_cy<8 : 6> on block
+   Top_module is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/Madd_n18554_cy<10 : 5> on block
+   Top_module is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/Madd_n18548_cy<8 : 6> on block
+   Top_module is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/Madd_n18532_cy<10 : 4> on block
+   Top_module is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/Madd_n18552_cy<10 : 5> on block
+   Top_module is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/Madd_n17554_cy<8 : 5> on block
+   Top_module is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/Madd_n17538_cy<9 : 5> on block
+   Top_module is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/Madd_n17522_cy<8 : 5> on block
+   Top_module is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/Madd_n17506_cy<8 : 5> on block
+   Top_module is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/Madd_n17490_cy<8 : 6> on block
+   Top_module is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/Madd_n17458_cy<9 : 5> on block
+   Top_module is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/Madd_n17426_cy<8 : 5> on block
+   Top_module is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/Madd_n17394_cy<9 : 5> on block
+   Top_module is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/Madd_n15160_cy<9 : 5> on block
+   Top_module is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   Grapic/Msub_GND_43_o_GND_43_o_sub_1109_OUT_cy<8 : 6> on block Top_module is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   Grapic/Msub_GND_43_o_GND_43_o_sub_722_OUT_cy<9 : 6> on block Top_module is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/n18540<11 : 5> on block
+   Top_module is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/n18538<11 : 6> on block
+   Top_module is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/n18536<11 : 3> on block
+   Top_module is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/n18534<8 : 2> on block Top_module
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/n18548<8 : 5> on block Top_module
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/n17554<8 : 5> on block Top_module
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/n17442<7 : 3> on block Top_module
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/n17426<6 : 4> on block Top_module
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Grapic/n15160<8 : 2> on block Top_module
+   is not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file Top_module.edif ...
+ngc2edif: Total memory usage is 89144 kilobytes
+
+Parsing EDIF File [./planAhead_run_1/generate_arrows.data/cache/Top_module_ngc_zx.edif]
+INFO: [Common 17-344] 'link_design' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Mon Dec 31 13:23:53 2018...
+INFO: [Common 17-83] Releasing license: PlanAhead

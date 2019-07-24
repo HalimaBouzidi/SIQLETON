@@ -1,0 +1,102 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+D:\xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 2
+-n 3 -fastpaths -xml Top_module.twx Top_module.ncd -o Top_module.twr
+Top_module.pcf -ucf c.ucf
+
+Design file:              Top_module.ncd
+Physical constraint file: Top_module.pcf
+Device,package,speed:     xc6slx16,csg324,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock KeyboardClock
+------------+------------+------------+------------+------------+-------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                   | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s)  | Phase  |
+------------+------------+------------+------------+------------+-------------------+--------+
+KeyboardData|    2.802(F)|      SLOW  |   -0.236(F)|      SLOW  |KeyboardClock_BUFGP|   0.000|
+------------+------------+------------+------------+------------+-------------------+--------+
+
+Clock Clk to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+HS          |         7.048(R)|      SLOW  |         3.470(R)|      FAST  |pixel_clk         |   0.000|
+VS          |         7.914(R)|      SLOW  |         3.929(R)|      FAST  |pixel_clk         |   0.000|
+qs_s        |         8.408(R)|      SLOW  |         3.983(R)|      FAST  |detect_dcm1_clk   |   0.000|
+rgb<0>      |        39.842(R)|      SLOW  |         6.820(R)|      FAST  |pixel_clk         |   0.000|
+rgb<1>      |        39.626(R)|      SLOW  |         6.712(R)|      FAST  |pixel_clk         |   0.000|
+rgb<2>      |        39.331(R)|      SLOW  |         6.542(R)|      FAST  |pixel_clk         |   0.000|
+rgb<3>      |        39.204(R)|      SLOW  |         6.497(R)|      FAST  |pixel_clk         |   0.000|
+rgb<4>      |        39.346(R)|      SLOW  |         6.572(R)|      FAST  |pixel_clk         |   0.000|
+rgb<5>      |        39.421(R)|      SLOW  |         6.656(R)|      FAST  |pixel_clk         |   0.000|
+rgb<6>      |        39.626(R)|      SLOW  |         6.785(R)|      FAST  |pixel_clk         |   0.000|
+rgb<7>      |        39.605(R)|      SLOW  |         6.739(R)|      FAST  |pixel_clk         |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock Clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk            |    8.101|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock KeyboardClock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+KeyboardClock  |         |         |         |    4.181|
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+start          |rgb<0>         |   21.775|
+start          |rgb<1>         |   21.559|
+start          |rgb<2>         |   21.264|
+start          |rgb<3>         |   21.137|
+start          |rgb<4>         |   21.279|
+start          |rgb<5>         |   21.354|
+start          |rgb<6>         |   21.559|
+start          |rgb<7>         |   21.538|
+---------------+---------------+---------+
+
+
+Analysis completed Thu Jan 10 17:00:59 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 290 MB
+
+
+

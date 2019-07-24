@@ -1,0 +1,38 @@
+Running: E:\amira\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/jean/Pictures/Projet_sembV4.1/generate_arrows/generate_arrows/test4_isim_beh.exe -prj C:/Users/jean/Pictures/Projet_sembV4.1/generate_arrows/generate_arrows/test4_beh.prj work.test4 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/jean/Pictures/Projet_sembV4.1/generate_arrows/generate_arrows/../../modules missing/msa_hdl.vhd" into library work
+Parsing VHDL file "C:/Users/jean/Pictures/Projet_sembV4.1/generate_arrows/generate_arrows/../../modules missing/diviseur_clk.vhd" into library work
+Parsing VHDL file "C:/Users/jean/Pictures/Projet_sembV4.1/generate_arrows/generate_arrows/../../modules missing/debounce_hdl.vhd" into library work
+Parsing VHDL file "C:/Users/jean/Pictures/Projet_sembV4.1/generate_arrows/generate_arrows/../../modules missing/SR.vhd" into library work
+Parsing VHDL file "C:/Users/jean/Pictures/Projet_sembV4.1/generate_arrows/generate_arrows/../../modules missing/Main.vhd" into library work
+Parsing VHDL file "C:/Users/jean/Pictures/Projet_sembV4.1/generate_arrows/generate_arrows/../../modules missing/LFSR.vhd" into library work
+Parsing VHDL file "C:/Users/jean/Pictures/Projet_sembV4.1/generate_arrows/generate_arrows/pick_an_arrow.vhd" into library work
+Parsing VHDL file "C:/Users/jean/Pictures/Projet_sembV4.1/generate_arrows/generate_arrows/../../modules missing/game_logic_runGa.vhd" into library work
+Parsing VHDL file "C:/Users/jean/Pictures/Projet_sembV4.1/generate_arrows/generate_arrows/test4.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 197900 KB
+Fuse CPU Usage: 702 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling architecture behavioral of entity SR [sr_default]
+Compiling architecture behavioral of entity LFSR [lfsr_default]
+Compiling architecture behavioral of entity pick_an_arrow [pick_an_arrow_default]
+Compiling architecture behavioral of entity debounce_hdl [debounce_hdl_default]
+Compiling architecture behavioral of entity diviseur_clk [diviseur_clk_default]
+Compiling architecture behavioral of entity msa_hdl [msa_hdl_default]
+Compiling architecture behavioral of entity Main [main_default]
+Compiling architecture behavioral of entity game_logic [game_logic_default]
+Compiling architecture behavior of entity test4
+Time Resolution for simulation is 1ps.
+Waiting for 6 sub-compilation(s) to finish...
+Compiled 22 VHDL Units
+Built simulation executable C:/Users/jean/Pictures/Projet_sembV4.1/generate_arrows/generate_arrows/test4_isim_beh.exe
+Fuse Memory Usage: 218836 KB
+Fuse CPU Usage: 1312 ms

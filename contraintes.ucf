@@ -1,0 +1,4 @@
+NET "vecteur_seq_s(0)" LOC = N11;
+NET "vecteur_seq_s(1)" LOC = M11;
+NET "vecteur_seq_s(2)" LOC = V15;
+NET "vecteur_seq_s(3)" LOC = U15;

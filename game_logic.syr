@@ -1,0 +1,875 @@
+Release 14.7 - xst P.20160913 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> 
+Reading design: game_logic.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "game_logic.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "game_logic"
+Output Format                      : NGC
+Target Device                      : xc6slx16-2-csg324
+
+---- Source Options
+Top Module Name                    : game_logic
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/ise/Documents/SR.vhd" into library work
+Parsing entity <SR>.
+Parsing architecture <Behavioral> of entity <sr>.
+Parsing VHDL file "/home/ise/Documents/LFSR.vhd" into library work
+Parsing entity <LFSR>.
+Parsing architecture <Behavioral> of entity <lfsr>.
+Parsing VHDL file "/home/ise/Documents/Detecteur_SEQ/generate_arrows/pick_an_arrow.vhd" into library work
+Parsing entity <pick_an_arrow>.
+Parsing architecture <Behavioral> of entity <pick_an_arrow>.
+Parsing VHDL file "/home/ise/Documents/game_logic_runGa.vhd" into library work
+Parsing entity <game_logic>.
+Parsing architecture <Behavioral> of entity <game_logic>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <game_logic> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:871 - "/home/ise/Documents/game_logic_runGa.vhd" Line 101: Using initial value '0' for lose_state since it is never assigned
+WARNING:HDLCompiler:871 - "/home/ise/Documents/game_logic_runGa.vhd" Line 120: Using initial value "11" for lives_left since it is never assigned
+
+Elaborating entity <SR> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <LFSR> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "/home/ise/Documents/LFSR.vhd" Line 52: dead should be on the sensitivity list of the process
+
+Elaborating entity <pick_an_arrow> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "/home/ise/Documents/Detecteur_SEQ/generate_arrows/pick_an_arrow.vhd" Line 60: obst_in should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/ise/Documents/Detecteur_SEQ/generate_arrows/pick_an_arrow.vhd" Line 61: lfsr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/ise/Documents/Detecteur_SEQ/generate_arrows/pick_an_arrow.vhd" Line 67: arrow_number should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/ise/Documents/Detecteur_SEQ/generate_arrows/pick_an_arrow.vhd" Line 68: arrow_number should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/ise/Documents/Detecteur_SEQ/generate_arrows/pick_an_arrow.vhd" Line 69: arrow_number should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/ise/Documents/Detecteur_SEQ/generate_arrows/pick_an_arrow.vhd" Line 71: lfsr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/ise/Documents/Detecteur_SEQ/generate_arrows/pick_an_arrow.vhd" Line 76: arrow_number should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/ise/Documents/Detecteur_SEQ/generate_arrows/pick_an_arrow.vhd" Line 77: arrow_number should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/ise/Documents/Detecteur_SEQ/generate_arrows/pick_an_arrow.vhd" Line 78: arrow_number should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/ise/Documents/Detecteur_SEQ/generate_arrows/pick_an_arrow.vhd" Line 80: lfsr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/ise/Documents/Detecteur_SEQ/generate_arrows/pick_an_arrow.vhd" Line 85: arrow_number should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/ise/Documents/Detecteur_SEQ/generate_arrows/pick_an_arrow.vhd" Line 86: arrow_number should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/ise/Documents/Detecteur_SEQ/generate_arrows/pick_an_arrow.vhd" Line 87: arrow_number should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/ise/Documents/Detecteur_SEQ/generate_arrows/pick_an_arrow.vhd" Line 89: lfsr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/ise/Documents/Detecteur_SEQ/generate_arrows/pick_an_arrow.vhd" Line 94: arrow_number should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/ise/Documents/Detecteur_SEQ/generate_arrows/pick_an_arrow.vhd" Line 95: arrow_number should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/ise/Documents/Detecteur_SEQ/generate_arrows/pick_an_arrow.vhd" Line 96: arrow_number should be on the sensitivity list of the process
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <game_logic>.
+    Related source file is "/home/ise/Documents/game_logic_runGa.vhd".
+WARNING:Xst:647 - Input <player_input<2:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 4x12-bit dual-port RAM <Mram_seq> for signal <seq>.
+    Found 32-bit register for signal <game_freq_gen.count>.
+    Found 32-bit register for signal <stock_seq.indice>.
+    Found 32-bit register for signal <nbreTab>.
+    Found 12-bit register for signal <current_vecteur_sequence>.
+    Found 32-bit register for signal <maj_vec_seq.indice_suiv>.
+    Found 1-bit register for signal <S_next>.
+    Found 32-bit register for signal <nbreVec>.
+    Found 12-bit register for signal <vecteur_seq>.
+    Found 8-bit register for signal <current_score>.
+    Found 32-bit register for signal <scoring_system.count>.
+    Found 1-bit register for signal <enable_game_update>.
+    Found 32-bit adder for signal <game_freq_gen.count[31]_GND_6_o_add_4_OUT> created at line 216.
+    Found 32-bit adder for signal <n0063> created at line 233.
+    Found 32-bit adder for signal <nbreTab[31]_GND_6_o_add_11_OUT> created at line 234.
+    Found 32-bit adder for signal <n0069> created at line 249.
+    Found 32-bit adder for signal <nbreVec[31]_GND_6_o_add_19_OUT> created at line 251.
+    Found 32-bit adder for signal <scoring_system.count[31]_GND_6_o_add_27_OUT> created at line 272.
+    Found 8-bit adder for signal <current_score[7]_GND_6_o_add_29_OUT> created at line 274.
+    Found 32-bit comparator greater for signal <nbreVec[31]_nbreTab[31]_LessThan_17_o> created at line 246
+    Summary:
+	inferred   1 RAM(s).
+	inferred   7 Adder/Subtractor(s).
+	inferred 226 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <game_logic> synthesized.
+
+Synthesizing Unit <SR>.
+    Related source file is "/home/ise/Documents/SR.vhd".
+    Found 17-bit register for signal <s_D>.
+    Summary:
+	inferred  17 D-type flip-flop(s).
+Unit <SR> synthesized.
+
+Synthesizing Unit <LFSR>.
+    Related source file is "/home/ise/Documents/LFSR.vhd".
+    Found 2-bit register for signal <cpt>.
+    Found 32-bit register for signal <lfsr>.
+    Found 2-bit adder for signal <cpt[1]_GND_12_o_add_1_OUT> created at line 1241.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  34 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <LFSR> synthesized.
+
+Synthesizing Unit <pick_an_arrow>.
+    Related source file is "/home/ise/Documents/Detecteur_SEQ/generate_arrows/pick_an_arrow.vhd".
+    Found 16-bit register for signal <lfsr>.
+    Found 4-bit adder for signal <PWR_9_o_GND_14_o_add_34_OUT> created at line 95.
+    Found 4-bit adder for signal <PWR_9_o_GND_14_o_add_37_OUT> created at line 96.
+    Found 2x2-bit multiplier for signal <n0279> created at line 95.
+WARNING:Xst:737 - Found 1-bit latch for signal <sequences<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sequences<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sequences<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sequences<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sequences<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sequences<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sequences<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sequences<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sequences<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sequences<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sequences<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sequences<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 16-bit comparator greater for signal <PWR_9_o_lfsr[15]_LessThan_2_o> created at line 61
+    Found 16-bit comparator greater for signal <PWR_9_o_lfsr[15]_LessThan_11_o> created at line 71
+    Found 16-bit comparator greater for signal <lfsr[15]_PWR_9_o_LessThan_12_o> created at line 71
+    Found 16-bit comparator greater for signal <GND_14_o_lfsr[15]_LessThan_21_o> created at line 80
+    Found 16-bit comparator greater for signal <lfsr[15]_PWR_9_o_LessThan_22_o> created at line 80
+    Found 16-bit comparator greater for signal <lfsr[15]_GND_14_o_LessThan_31_o> created at line 89
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+	inferred  12 Latch(s).
+	inferred   6 Comparator(s).
+	inferred 178 Multiplexer(s).
+Unit <pick_an_arrow> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x12-bit dual-port RAM                                : 1
+# Multipliers                                          : 1
+ 2x2-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 10
+ 2-bit adder                                           : 1
+ 32-bit adder                                          : 6
+ 4-bit adder                                           : 2
+ 8-bit adder                                           : 1
+# Registers                                            : 18
+ 1-bit register                                        : 2
+ 12-bit register                                       : 2
+ 16-bit register                                       : 1
+ 17-bit register                                       : 4
+ 2-bit register                                        : 1
+ 32-bit register                                       : 7
+ 8-bit register                                        : 1
+# Latches                                              : 12
+ 1-bit latch                                           : 12
+# Comparators                                          : 7
+ 16-bit comparator greater                             : 6
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 180
+ 1-bit 2-to-1 multiplexer                              : 178
+ 2-bit 2-to-1 multiplexer                              : 2
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_2> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_3> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_4> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_5> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_6> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_7> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_8> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_9> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_10> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_11> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_12> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_13> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_14> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_15> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_16> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_17> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_18> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_19> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_20> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_21> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_22> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_23> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_24> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_25> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_26> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_27> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_28> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_29> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_30> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_31> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_2> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_3> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_4> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_5> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_6> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_7> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_8> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_9> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_10> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_11> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_12> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_13> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_14> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_15> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_16> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_17> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_18> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_19> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_20> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_21> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_22> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_23> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_24> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_25> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_26> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_27> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_28> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_29> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_30> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <stock_seq.indice_31> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <game_logic>.
+The following registers are absorbed into counter <game_freq_gen.count>: 1 register on signal <game_freq_gen.count>.
+The following registers are absorbed into counter <current_score>: 1 register on signal <current_score>.
+The following registers are absorbed into counter <nbreTab>: 1 register on signal <nbreTab>.
+The following registers are absorbed into counter <scoring_system.count>: 1 register on signal <scoring_system.count>.
+The following registers are absorbed into counter <nbreVec>: 1 register on signal <nbreVec>.
+INFO:Xst:3231 - The small RAM <Mram_seq> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 12-bit                     |          |
+    |     clkA           | connected to signal <enable_game_update> | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <stock_seq.indice> |          |
+    |     diA            | connected to signal <data>          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 4-word x 12-bit                     |          |
+    |     addrB          | connected to signal <maj_vec_seq.indice_suiv> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <game_logic> synthesized (advanced).
+WARNING:Xst:2677 - Node <stock_seq.indice_2> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_3> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_4> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_5> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_6> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_7> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_8> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_9> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_10> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_11> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_12> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_13> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_14> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_15> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_16> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_17> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_18> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_19> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_20> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_21> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_22> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_23> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_24> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_25> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_26> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_27> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_28> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_29> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_30> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <stock_seq.indice_31> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_2> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_3> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_4> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_5> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_6> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_7> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_8> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_9> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_10> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_11> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_12> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_13> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_14> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_15> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_16> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_17> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_18> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_19> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_20> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_21> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_22> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_23> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_24> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_25> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_26> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_27> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_28> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_29> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_30> of sequential type is unconnected in block <game_logic>.
+WARNING:Xst:2677 - Node <maj_vec_seq.indice_suiv_31> of sequential type is unconnected in block <game_logic>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x12-bit dual-port distributed RAM                    : 1
+# Multipliers                                          : 1
+ 2x2-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 7
+ 2-bit adder                                           : 3
+ 32-bit adder                                          : 2
+ 4-bit adder                                           : 2
+# Counters                                             : 5
+ 32-bit up counter                                     : 4
+ 8-bit up counter                                      : 1
+# Registers                                            : 148
+ Flip-Flops                                            : 148
+# Comparators                                          : 7
+ 16-bit comparator greater                             : 6
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 180
+ 1-bit 2-to-1 multiplexer                              : 178
+ 2-bit 2-to-1 multiplexer                              : 2
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <game_logic> ...
+
+Optimizing unit <SR> ...
+
+Optimizing unit <LFSR> ...
+
+Optimizing unit <pick_an_arrow> ...
+WARNING:Xst:1293 - FF/Latch <nbreVec_2> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_3> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_4> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_5> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_6> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_7> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_8> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_9> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_10> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_11> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_12> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_13> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_14> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_15> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_16> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_17> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_18> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_19> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_20> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_21> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_22> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_23> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_24> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_25> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_26> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_27> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_28> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_29> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_30> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_31> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <maj_vec_seq.indice_suiv_1> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_3> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_4> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_5> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_6> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_7> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_8> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_9> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_10> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_11> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_12> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_13> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_14> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_15> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_16> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_17> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_18> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_19> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_20> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_21> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_22> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_23> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_24> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_25> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_26> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_27> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_28> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_29> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_30> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <scoring_system.count_31> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <nbreVec_1> has a constant value of 0 in block <game_logic>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <stock_seq.indice_0> in Unit <game_logic> is equivalent to the following FF/Latch, which will be removed : <nbreTab_0> 
+INFO:Xst:2261 - The FF/Latch <stock_seq.indice_1> in Unit <game_logic> is equivalent to the following FF/Latch, which will be removed : <nbreTab_1> 
+INFO:Xst:3203 - The FF/Latch <S_next> in Unit <game_logic> is the opposite to the following 2 FFs/Latches, which will be removed : <maj_vec_seq.indice_suiv_0> <nbreVec_0> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block game_logic, actual ratio is 4.
+
+Final Macro Processing ...
+
+Processing Unit <game_logic> :
+	Found 26-bit shift register for signal <obst_generator/lfsr_31>.
+Unit <game_logic> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 193
+ Flip-Flops                                            : 193
+# Shift Registers                                      : 1
+ 26-bit shift register                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : game_logic.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 466
+#      GND                         : 1
+#      INV                         : 8
+#      LUT1                        : 105
+#      LUT2                        : 57
+#      LUT3                        : 9
+#      LUT4                        : 20
+#      LUT5                        : 10
+#      LUT6                        : 23
+#      MUXCY                       : 122
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 109
+# FlipFlops/Latches                : 232
+#      FD                          : 74
+#      FDC                         : 70
+#      FDCE                        : 31
+#      FDE                         : 33
+#      FDPE                        : 1
+#      FDRE                        : 11
+#      LDE                         : 12
+# RAMS                             : 2
+#      RAM32M                      : 2
+# Shift Registers                  : 1
+#      SRLC32E                     : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 89
+#      IBUF                        : 1
+#      OBUF                        : 88
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             232  out of  18224     1%  
+ Number of Slice LUTs:                  241  out of   9112     2%  
+    Number used as Logic:               232  out of   9112     2%  
+    Number used as Memory:                9  out of   2176     0%  
+       Number used as RAM:                8
+       Number used as SRL:                1
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    352
+   Number with an unused Flip Flop:     120  out of    352    34%  
+   Number with an unused LUT:           111  out of    352    31%  
+   Number of fully used LUT-FF pairs:   121  out of    352    34%  
+   Number of unique control sets:        12
+
+IO Utilization: 
+ Number of IOs:                          95
+ Number of bonded IOBs:                  90  out of    232    38%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+---------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)           | Load  |
+-----------------------------------+---------------------------------+-------+
+Clk                                | BUFGP                           | 33    |
+enable_game_update                 | BUFG                            | 190   |
+obst_generator/lfsr_0              | NONE(arrow_selector/sequences_0)| 12    |
+-----------------------------------+---------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 6.366ns (Maximum Frequency: 157.078MHz)
+   Minimum input arrival time before clock: 5.482ns
+   Maximum output required time after clock: 4.162ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk'
+  Clock period: 6.366ns (frequency: 157.078MHz)
+  Total number of paths / destination ports: 17952 / 33
+-------------------------------------------------------------------------
+Delay:               6.366ns (Levels of Logic = 35)
+  Source:            game_freq_gen.count_0 (FF)
+  Destination:       game_freq_gen.count_0 (FF)
+  Source Clock:      Clk rising
+  Destination Clock: Clk rising
+
+  Data Path: game_freq_gen.count_0 to game_freq_gen.count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.525   0.725  game_freq_gen.count_0 (game_freq_gen.count_0)
+     INV:I->O              1   0.255   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_lut<0>_INV_0 (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<0> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<1> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<2> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<3> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<4> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<5> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<6> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<7> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<8> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<9> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<10> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<11> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<12> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<13> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<14> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<15> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<16> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<17> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<18> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<19> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<20> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<21> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<22> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<23> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<24> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<24>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<25> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<25>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<26> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<26>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<27> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<27>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<28> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<28>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<29> (Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_cy<29>)
+     XORCY:CI->O           1   0.206   0.790  Madd_game_freq_gen.count[31]_GND_6_o_add_4_OUT_xor<30> (game_freq_gen.count[31]_GND_6_o_add_4_OUT<30>)
+     LUT6:I4->O            2   0.250   0.954  GND_6_o_game_freq_gen.count[31]_equal_6_o<31>5_SW0 (N17)
+     LUT6:I3->O           17   0.235   1.209  GND_6_o_game_freq_gen.count[31]_equal_6_o<31>7 (GND_6_o_game_freq_gen.count[31]_equal_6_o)
+     LUT2:I1->O            1   0.254   0.000  game_freq_gen.count_0_rstpot (game_freq_gen.count_0_rstpot)
+     FD:D                      0.074          game_freq_gen.count_0
+    ----------------------------------------
+    Total                      6.366ns (2.688ns logic, 3.678ns route)
+                                       (42.2% logic, 57.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'enable_game_update'
+  Clock period: 5.303ns (frequency: 188.581MHz)
+  Total number of paths / destination ports: 1534 / 269
+-------------------------------------------------------------------------
+Delay:               5.303ns (Levels of Logic = 19)
+  Source:            S_next (FF)
+  Destination:       current_vecteur_sequence_0 (FF)
+  Source Clock:      enable_game_update rising
+  Destination Clock: enable_game_update rising
+
+  Data Path: S_next to current_vecteur_sequence_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              14   0.525   1.126  S_next (S_next)
+     INV:I->O              8   0.255   1.172  S_next_inv1_INV_0 (Madd_n0069_Madd_cy<0>)
+     LUT4:I1->O            1   0.235   0.000  Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_lut<0> (Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<0> (Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<1> (Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<2> (Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<3> (Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<4> (Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<5> (Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<6> (Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<7> (Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<8> (Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<9> (Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<10> (Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<11> (Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<12> (Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<13> (Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<14> (Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<14>)
+     MUXCY:CI->O          13   0.023   1.098  Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<15> (Mcompar_nbreVec[31]_nbreTab[31]_LessThan_17_o_cy<15>)
+     LUT4:I3->O            1   0.254   0.000  current_vecteur_sequence_0_rstpot (current_vecteur_sequence_0_rstpot)
+     FD:D                      0.074          current_vecteur_sequence_0
+    ----------------------------------------
+    Total                      5.303ns (1.907ns logic, 3.396ns route)
+                                       (36.0% logic, 64.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'obst_generator/lfsr_0'
+  Clock period: 2.255ns (frequency: 443.459MHz)
+  Total number of paths / destination ports: 13 / 12
+-------------------------------------------------------------------------
+Delay:               2.255ns (Levels of Logic = 2)
+  Source:            arrow_selector/sequences_5 (LATCH)
+  Destination:       arrow_selector/sequences_5 (LATCH)
+  Source Clock:      obst_generator/lfsr_0 falling
+  Destination Clock: obst_generator/lfsr_0 falling
+
+  Data Path: arrow_selector/sequences_5 to arrow_selector/sequences_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              3   0.581   1.221  arrow_selector/sequences_5 (arrow_selector/sequences_5)
+     LUT6:I0->O            1   0.254   0.000  arrow_selector/Mmux_sequences[11]_sequences[5]_MUX_352_o24_F (N21)
+     MUXF7:I0->O           1   0.163   0.000  arrow_selector/Mmux_sequences[11]_sequences[5]_MUX_352_o24 (arrow_selector/sequences[11]_sequences[5]_MUX_352_o)
+     LDE:D                     0.036          arrow_selector/sequences_5
+    ----------------------------------------
+    Total                      2.255ns (1.034ns logic, 1.221ns route)
+                                       (45.9% logic, 54.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'enable_game_update'
+  Total number of paths / destination ports: 116 / 116
+-------------------------------------------------------------------------
+Offset:              5.482ns (Levels of Logic = 2)
+  Source:            player_input<0> (PAD)
+  Destination:       scoring_system.count_0 (FF)
+  Destination Clock: enable_game_update rising
+
+  Data Path: player_input<0> to scoring_system.count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           112   1.328   2.676  player_input_0_IBUF (player_input_0_IBUF)
+     LUT5:I0->O            3   0.254   0.765  _n00991 (_n0099)
+     FDRE:R                    0.459          scoring_system.count_0
+    ----------------------------------------
+    Total                      5.482ns (2.041ns logic, 3.441ns route)
+                                       (37.2% logic, 62.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'enable_game_update'
+  Total number of paths / destination ports: 88 / 88
+-------------------------------------------------------------------------
+Offset:              4.162ns (Levels of Logic = 1)
+  Source:            arrowUp_sr/s_D_16 (FF)
+  Destination:       arrow_locs_up<16> (PAD)
+  Source Clock:      enable_game_update rising
+
+  Data Path: arrowUp_sr/s_D_16 to arrow_locs_up<16>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.525   0.725  arrowUp_sr/s_D_16 (arrowUp_sr/s_D_16)
+     OBUF:I->O                 2.912          arrow_locs_up_16_OBUF (arrow_locs_up<16>)
+    ----------------------------------------
+    Total                      4.162ns (3.437ns logic, 0.725ns route)
+                                       (82.6% logic, 17.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk            |    6.366|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock enable_game_update
+---------------------+---------+---------+---------+---------+
+                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------+---------+---------+---------+---------+
+enable_game_update   |    5.303|         |         |         |
+obst_generator/lfsr_0|         |    1.700|         |         |
+---------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock obst_generator/lfsr_0
+---------------------+---------+---------+---------+---------+
+                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------+---------+---------+---------+---------+
+enable_game_update   |         |         |    7.126|         |
+obst_generator/lfsr_0|         |         |    2.255|         |
+---------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 36.00 secs
+Total CPU time to Xst completion: 29.40 secs
+ 
+--> 
+
+
+Total memory usage is 389456 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  214 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

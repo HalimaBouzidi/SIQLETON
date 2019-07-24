@@ -1,0 +1,4 @@
+vhdl work "../../modules missing/msa_hdl.vhd"
+vhdl work "../../modules missing/diviseur_clk.vhd"
+vhdl work "../../modules missing/debounce_hdl.vhd"
+vhdl work "../../modules missing/Main.vhd"
